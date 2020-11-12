@@ -14,6 +14,7 @@ while($ver=mysqli_fetch_array($result)){
 $datosX=json_encode($valoresx);
 $datosY=json_encode($valoresy);
 ?>
+<br>
 <div class="container" id="graficaLineal"></div>
 <!--Convertir la cadena JSON del php al JS-->
 <script type="text/javascript">
@@ -29,7 +30,6 @@ $datosY=json_encode($valoresy);
 <script type="text/javascript">
     datosX=createCadenaLineal('<?php echo $datosX ?>');
     datosY=createCadenaLineal('<?php echo $datosY ?>');
-
 
     var trace1 = {
         x: datosY,
