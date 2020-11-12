@@ -2,12 +2,14 @@
 include_once '../modelo/claseConexion.php'; 
 require_once '../modelo/cn.php';
 require_once '../modelo/claseConsultas.php';
+$con=new claseConexion();
+$estudiantes=$con->ejecutarConsulta
+("SELECT `id`, `nombre`, `apellido`, `codigo`, `semestre`, `jornada`, `carrera`, `imagen`, `id_sede`, `fechaingreso`, `fechasalida` FROM `estudiantes` WHERE 1");
+$con->cerrarConexion(); 
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -33,23 +35,17 @@ require_once '../modelo/claseConsultas.php';
 <body id="page-top">
     <?php include'cabeza/nav.php'; ?>
     <br>
-    <!-- Page Wrapper -->
-    <div id="wrapper">
-                <!-- Begin Page Content -->
-                <div class="container">
-                </div>
-                </div>
+    <div class="container-fluid">
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Tabla General</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                <thead>
-                                    
-                                    <tr>
+                                    <thead>
+                                        <tr>
                                             <th>ID</th>
                                             <th>Nombres</th>
                                             <th>Apellidos</th>
@@ -58,26 +54,25 @@ require_once '../modelo/claseConsultas.php';
                                             <th>Jornada</th>
                                             <th>Carrera</th>
                                         </tr>
-                                      </thead>
+                                    </thead>
                                     <tbody>
-                                    <?php foreach (daoclaseConsulta::listarDatos() as $fila): ?>
-                                        
+                                        <?php foreach ($estudiantes as $f):?>
                                         <tr>
-                                            <td><?$fila[0]?></td>
-                                            <td><??></td>
-                                            <td><??></td>
-                                            <td><??></td>
-                                            <td><??></td>
-                                            <td><??></td>
-                                            <td><??></td>
+                                            <td><?=$f[0]?></td>
+                                            <td><?=$f[1]?></td>
+                                            <td><?=$f[2]?></td>
+                                            <td><?=$f[3]?></td>
+                                            <td><?=$f[4]?></td>
+                                            <td><?=$f[5]?></td>
+                                            <td><?=$f[6]?></td>
                                         </tr>
-                                        <?php endforeach;?> 
+                                        <?php endforeach ?>
                                     </tbody>
                                 </table>
                             </div>
                         </div>
                     </div>
-          
+
                 </div>
                 <!-- /.container-fluid -->
 
@@ -124,6 +119,8 @@ require_once '../modelo/claseConsultas.php';
             </div>
         </div>
     </div>
+                                    
+            
 
     <!-- Bootstrap core JavaScript-->
     <script src="../librerias/jquery.min.js"></script>
@@ -150,3 +147,4 @@ require_once '../modelo/claseConsultas.php';
 </body>
 
 </html>
+                                    

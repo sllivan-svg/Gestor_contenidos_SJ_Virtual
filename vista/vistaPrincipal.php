@@ -1,3 +1,6 @@
+<?php 
+require_once '../modelo/cn.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +15,26 @@
 <body>
 <?php include'cabeza/nav.php';?> 
     <div class="container">
+        <table>
+        <?php 
+            $con=new claseConexion();
+                                    $alumnos=$con->ejecutarConsulta
+                                    ("SELECT `id`, `nombre`, `apellido`, `codigo`, `semestre`, `jornada`, `carrera`, `imagen`, `id_sede`, `fechaingreso`, `fechasalida` FROM `estudiantes` WHERE 1");
+                                    $con->cerrarConexion(); 
+                                    ?>
+                                   
+            <tbody>
+                <tr>
+                    <th>hola</th>
+                </tr>
+                <tr>
+                <?php foreach ($alumnos as $f):?>              
+                    <td>puta
+                        <?$f[5]?></td>
+                    <?php endforeach ?>
+                </tr>
+            </tbody>
+        </table>
     <div>
     </div>
     </div>
