@@ -1,18 +1,25 @@
 <?php 
 require_once '../../modelo/claseConexion.php';
 $conexion=conexion();
-$sql = "SELECT fechaingreso,fechasalida From estudiantes";
+$sql = "SELECT fechaingreso From estudiantes WHERE jornada = 'noche'";
 $result=mysqli_query($conexion,$sql);
-$valoresy=array();//Fecha ingreso
 $valoresx=array();//Fecha salida
 
 while($ver=mysqli_fetch_array($result)){
-    $valoresy[]=$ver[1];
     $valoresx[]=$ver[0];
 }
 
+$conexion=conexion();
+$sql = "SELECT fechaingreso From estudiantes WHERE jornada = 'mañana'";
+$result=mysqli_query($conexion,$sql);
+$valoresx2=array();//Fecha salida
+
+while($ver2=mysqli_fetch_array($result)){
+    $valoresx2[]=$ver2[0];
+}
+
 $datosX=json_encode($valoresx);
-$datosY=json_encode($valoresy);
+$datosX2=json_encode($valoresx2);
 ?>
 <br>
 <div class="container" id="graficaBarras"></div>
@@ -29,16 +36,24 @@ $datosY=json_encode($valoresy);
 </script>
 <Script type="text/javascript">
     datosX=createCadenaBarras('<?php echo $datosX ?>');
-    datosY=createCadenaBarras('<?php echo $datosY ?>');
-    var data = [
-    {
-        x: datosX,
-        y: datosY,
-        type: 'bar'
-    }
-    ];
-    /*['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre']*/
-    /*['01/01/2020','01/02/2020','01/03/2020','01/04/2020','01/05/2020','01/06/2020','01/07/2020','01/08/2020','01/09/2020','01/10/2020','01/11/2020','01/12/2020']*/
+    datosX2=createCadenaBarras('<?php echo $datosX2 ?>');
+    var trace1 = {
+    x: [1,2,3,4,5,6,7,8,9,10],
+    y: datosX,
+    name: 'Noche',
+    type: 'bar'
+    };
 
-Plotly.newPlot('graficaBarras', data);
+    var trace2 = {
+    x: [1,2,3,4,5,6,7,8,9,10],
+    y: datosX2,
+    name: 'Mañana',
+    type: 'bar'
+    };
+
+    var data = [trace1, trace2];
+
+    var layout = {barmode: 'group'};
+
+    Plotly.newPlot('graficaBarras', data, layout);
 </Script>

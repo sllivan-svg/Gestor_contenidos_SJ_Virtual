@@ -4,7 +4,7 @@ require_once '../modelo/cn.php';
 require_once '../modelo/claseConsultas.php';
 $con=new claseConexion();
 $estudiantes=$con->ejecutarConsulta
-("SELECT `id`, `nombre`, `apellido`, `codigo`, `semestre`, `jornada`, `carrera`, `imagen`, `id_sede`, `fechaingreso`, `fechasalida` FROM `estudiantes` WHERE 1");
+("SELECT `id`, `nombre`, `apellido`, `codigo`, `semestre`, `jornada`, `carrera`, `imagen`, `id_sede`, `fechaingreso` FROM `estudiantes`");
 $con->cerrarConexion(); 
 ?>
 <!DOCTYPE html>
@@ -120,8 +120,8 @@ $con->cerrarConexion();
         </div>
     </div>
                                     
-            
-
+    <!--Tabla de porfesores-->
+                                      
     <!-- Bootstrap core JavaScript-->
     <script src="../librerias/jquery.min.js"></script>
     <script src="../librerias/bootstrap/js/bootstrap.bundle.min.js"></script>

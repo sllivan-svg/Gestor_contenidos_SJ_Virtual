@@ -1,18 +1,15 @@
 <?php 
 require_once '../../modelo/claseConexion.php';
 $conexion=conexion();
-$sql = "SELECT fechaingreso,fechasalida From estudiantes";
+$sql = "SELECT fechaingreso FROM `estudiantes` WHERE jornada ='noche'";
 $result=mysqli_query($conexion,$sql);
-$valoresy=array();//Fecha ingreso
-$valoresx=array();//Fecha salida
+$valoresx=array();//Fecha
+$conexion=conexion();
 
 while($ver=mysqli_fetch_array($result)){
-    $valoresy[]=$ver[1];
     $valoresx[]=$ver[0];
 }
-
 $datosX=json_encode($valoresx);
-$datosY=json_encode($valoresy);
 ?>
 <br>
 <div class="container" id="graficaLineal"></div>
@@ -29,11 +26,11 @@ $datosY=json_encode($valoresy);
 </script>
 <script type="text/javascript">
     datosX=createCadenaLineal('<?php echo $datosX ?>');
-    datosY=createCadenaLineal('<?php echo $datosY ?>');
 
     var trace1 = {
-        x: datosY,
-        y: datosX,
+        x: datosX,
+        y: ['2020','2019','2018','2017','2016','2015'],
+        name: 'Estudiantes Nuevos',
         type: 'scatter',
         line:{
             color: 'red',
@@ -42,12 +39,17 @@ $datosY=json_encode($valoresy);
     };
 
     /*var trace2 = {
-    x: [1, 2, 3, 4],
-    y: [16, 5, 11, 9],
+    x: ['2016-06-06','2017-06-06','2018-06-06','2019-06-06'],
+    y: ['2020','2019','2018','2017','2016','2015'],
     type: 'scatter'
     };*/
+    /*
+    var trace3 = {
+    x: ['2019-06-06','2020-06-06','2020-06-06','2020-06-06'],
+    y: ['2020','2019','2018','2017','2016','2015'],    
+    }*/
 
-    var data = [trace1/*, trace2*/];
+    var data = [trace1/*, trace2/*, trace3*/];
 
     Plotly.newPlot('graficaLineal', data);
 </script>
