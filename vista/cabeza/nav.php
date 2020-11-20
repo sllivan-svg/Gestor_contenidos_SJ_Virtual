@@ -9,7 +9,7 @@
         <a class="nav-link" href="vistaTablaEstudiantes.php">Tablas Estudiantes</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="vistaTablaDocente.php">Tabla Docentes</a>
+        <a class="nav-link" href="vistaTablaDocente.php">Tabla Profesores</a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="vistaTablaIngresoAPP.php">Tabla Ingreso APP</a>

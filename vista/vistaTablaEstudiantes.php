@@ -38,8 +38,10 @@ $con->cerrarConexion();
     <div class="container-fluid">
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
-                        <div class="card-header py-3">
+                        <div class="card-header py-3 text-center">
                             <h6 class="m-0 font-weight-bold text-primary">Tabla Estudiantes</h6>
+                            <br>
+                            <p class="text-dark">Lista de estudiantes nuevos.</p>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
