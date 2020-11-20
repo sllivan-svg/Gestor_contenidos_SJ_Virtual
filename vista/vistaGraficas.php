@@ -31,6 +31,18 @@
     </div>
     </div>
     </div>
+    <div class="col-lg-12" style="padding-top: 20px;">
+    <div class="card">
+    <div class="card-header text-center">
+    Estudiantes que ingresaro a la APP
+    </div>
+    <div class="card-body">
+        <div class="card">
+            <div id="cargaLinealingresos">sasa</div>
+        </div>
+    </div>
+    </div>
+    </div>
 </body>
 </html>
 <script type="text/javascript">
@@ -38,5 +50,6 @@
         $('#cargaLineal').load('graficas/lineal.php');
         $('#cargaBarras').load('graficas/barras.php');
         $('#cargaPastel').load('graficas/pastel.php');
+        $('#cargaLinealingresos').load('graficas/linealIngresos.php');
     });
 </script>

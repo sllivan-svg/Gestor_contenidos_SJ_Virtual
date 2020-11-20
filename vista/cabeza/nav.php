@@ -6,13 +6,16 @@
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="tablageneral.php">Tabla General</a>
+        <a class="nav-link" href="vistaTablaEstudiantes.php">Tablas Estudiantes</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="graficas.php">Graficas</a>
+        <a class="nav-link" href="vistaTablaDocente.php">Tabla Docentes</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#">Pricing</a>
+        <a class="nav-link" href="vistaTablaIngresoAPP.php">Tabla Ingreso APP</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="vistaGraficas.php">Graficas</a>
       </li>
     </ul>
   </div>
