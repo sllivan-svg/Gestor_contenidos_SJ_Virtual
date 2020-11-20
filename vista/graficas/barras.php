@@ -41,14 +41,22 @@ $datosX2=json_encode($valoresx2);
     x: [1,2,3,4,5,6,7,8,9,10],
     y: datosX,
     name: 'Noche',
-    type: 'bar'
+    type: 'bar',
+    marker: {
+    color: 'green',
+    opacity: 0.7,
+    }
     };
 
     var trace2 = {
     x: [1,2,3,4,5,6,7,8,9,10],
     y: datosX2,
     name: 'Mañana',
-    type: 'bar'
+    type: 'bar',
+    marker: {
+    color: 'blue',
+    opacity: 0.7,
+    }
     };
 
     var data = [trace1, trace2];

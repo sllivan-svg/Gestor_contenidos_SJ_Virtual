@@ -26,9 +26,10 @@ $datosFechaNoche=json_encode($fechaN);
 <Script>
     datos1=createCadenaPastel('<?php echo $datosFechaNoche ?>');
     var data = [{
-    values: [50,56],
+    values: [18,38],
     labels: ['Mañana','Noche'],
-    type: 'pie'
+    type: 'pie',
+    
 }];
 
 var layout = {

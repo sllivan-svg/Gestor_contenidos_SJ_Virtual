@@ -14,7 +14,7 @@
     <div class="col-lg-12" style="padding-top: 20px;">
     <div class="card">
     <div class="card-header text-center">
-    Graficas
+    Indice por año de estudiantes nuevos.
     </div>
     <div class="card-body">
     <div class="row">
