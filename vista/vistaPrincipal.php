@@ -16,7 +16,7 @@
     <link href="../librerias/bootstrap/css/dataTables.bootstrap4.min.css" rel="stylesheet">
     <Script src="../librerias/jquery-3.5.1.min.js"></Script>
     <script src="../librerias/plotly-latest.min.js"></script>
-    <title>Document</title>
+    <title>SJ Virtual</title>
 </head>
 <body>
     

@@ -16,7 +16,7 @@ $con->cerrarConexion();
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Tabla Estudiantes</title>
+    <title>Estudiantes</title>
 
     <!-- Custom fonts for this template -->
     <link
