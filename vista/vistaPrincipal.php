@@ -23,7 +23,17 @@
     <div class="container-fluid">
     <div class="card shadow mb-4">
         <div class="card-header py-3 text-center">
-            <h2 class="m-0 font-weight-bold text-primary">¿Que es SJ Virtual?</h2>
+            <h2 class="m-1 font-weight-bold text-primary">SJ Virtual</h2>
+        </div>
+        <div class="card-body">
+            <h3 class="font-weight-bold text-danger">¿Que es?</h3>
+            <br>
+            <p class="text-muted">
+            Somo un proyecto instituciones creado para mostrar un tour virtual de las diferentes sede para la Fundación de educación superior San José como parte de semillero de investigación.
+            </p>
+            <p class="text-muted">
+            En este aplicativo mostraremos un Data Waterhouse de nuestra aplicación, en la cual mostraremos mediante tablas y graficas la información de los estudiantes nuevos que entran a la institución educativa y un tránsito de ingresos a la aplicación por parte de los estudiantes y profesores. 
+            </p>
         </div>
     </div>
     </div>
