@@ -22,8 +22,8 @@
     <?php include 'cabeza/nav.php'?>
     <div class="container-fluid">
     <div class="card shadow mb-4">
-        <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary"></h6>
+        <div class="card-header py-3 text-center">
+            <h2 class="m-0 font-weight-bold text-primary">¿Que es SJ Virtual?</h2>
         </div>
     </div>
     </div>

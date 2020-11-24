@@ -1,10 +1,11 @@
-<?php 
+<?php
+mb_internal_encoding('UTF-8'); 
 include_once '../modelo/claseConexion.php'; 
 require_once '../modelo/cn.php';
 require_once '../modelo/claseConsultas.php';
 $con=new claseConexion();
 $estudiantes=$con->ejecutarConsulta
-("SELECT `id`, `nombre`, `apellido`, `codigo`, `semestre`, `jornada`, `carrera`, `imagen`, `id_sede`, `fechaingreso` FROM `estudiantes`");
+("SELECT `id`, `nombre`, `apellido`, `codigo`, `semestre`, `jornada`, `carrera`, `id_sede`, `fechaingreso` FROM `estudiantes`");
 $con->cerrarConexion(); 
 ?>
 <!DOCTYPE html>
@@ -121,9 +122,8 @@ $con->cerrarConexion();
             </div>
         </div>
     </div>
-                                    
-    <!--Tabla de porfesores-->
-                                      
+
+</body>
     <!-- Bootstrap core JavaScript-->
     <script src="../librerias/jquery.min.js"></script>
     <script src="../librerias/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -145,8 +145,5 @@ $con->cerrarConexion();
 
     <!-- Page level custom scripts -->
     <script src="../librerias/bootstrap/js/datatables-demo.js"></script>
-
-</body>
-
 </html>
                                     

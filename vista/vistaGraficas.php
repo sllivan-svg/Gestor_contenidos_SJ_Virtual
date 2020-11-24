@@ -38,7 +38,7 @@
     </div>
     <div class="card-body">
         <div class="card">
-            <div id="cargaLinealingresos">sasa</div>
+            <div id="cargaLinealingresos"></div>
         </div>
     </div>
     </div>
